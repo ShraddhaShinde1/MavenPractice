@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-01-27T10:46:56Z" name="Command line suite" finished-at="2021-01-27T10:46:57Z" duration-ms="16">
+    <groups>
+    </groups>
+    <test started-at="2021-01-27T10:46:56Z" name="Command line test" finished-at="2021-01-27T10:46:57Z" duration-ms="16">
+      <class name="qaclickacademy.Mavenjava.AppiumTest">
+        <test-method signature="AndriodApp()[pri:0, instance:qaclickacademy.Mavenjava.AppiumTest@359f7cdf]" started-at="2021-01-27T10:46:56Z" name="AndriodApp" finished-at="2021-01-27T10:46:57Z" duration-ms="16" status="PASS">
+        </test-method> <!-- AndriodApp -->
+        <test-method signature="IOSAPP()[pri:0, instance:qaclickacademy.Mavenjava.AppiumTest@359f7cdf]" started-at="2021-01-27T10:46:57Z" name="IOSAPP" finished-at="2021-01-27T10:46:57Z" duration-ms="0" status="PASS">
+        </test-method> <!-- IOSAPP -->
+      </class> <!-- qaclickacademy.Mavenjava.AppiumTest -->
+      <class name="qaclickacademy.Mavenjava.RESTAPITest">
+        <test-method signature="deleteTwitter()[pri:0, instance:qaclickacademy.Mavenjava.RESTAPITest@4567f35d]" started-at="2021-01-27T10:46:57Z" name="deleteTwitter" finished-at="2021-01-27T10:46:57Z" duration-ms="0" status="PASS">
+        </test-method> <!-- deleteTwitter -->
+        <test-method signature="postJIRA()[pri:0, instance:qaclickacademy.Mavenjava.RESTAPITest@4567f35d]" started-at="2021-01-27T10:46:57Z" name="postJIRA" finished-at="2021-01-27T10:46:57Z" duration-ms="0" status="PASS">
+        </test-method> <!-- postJIRA -->
+      </class> <!-- qaclickacademy.Mavenjava.RESTAPITest -->
+      <class name="qaclickacademy.Mavenjava.SeleniumTest">
+        <test-method signature="elementsUI()[pri:0, instance:qaclickacademy.Mavenjava.SeleniumTest@1fa268de]" started-at="2021-01-27T10:46:57Z" name="elementsUI" finished-at="2021-01-27T10:46:57Z" duration-ms="0" status="PASS">
+        </test-method> <!-- elementsUI -->
+        <test-method signature="BrowserAutomation()[pri:0, instance:qaclickacademy.Mavenjava.SeleniumTest@1fa268de]" started-at="2021-01-27T10:46:57Z" name="BrowserAutomation" finished-at="2021-01-27T10:46:57Z" duration-ms="0" status="PASS">
+        </test-method> <!-- BrowserAutomation -->
+      </class> <!-- qaclickacademy.Mavenjava.SeleniumTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

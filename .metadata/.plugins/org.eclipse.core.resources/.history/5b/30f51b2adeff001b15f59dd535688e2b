@@ -1,0 +1,3 @@
+module PageObjectModel {
+	requires selenium.api;
+}

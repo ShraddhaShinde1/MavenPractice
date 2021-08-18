@@ -1,0 +1,23 @@
+package ObjectRepo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class RediffHome {
+	WebDriver driver;
+	
+	public RediffHome(WebDriver driver)
+	{
+		this.driver=driver;
+	}
+	By username= By.id("login1");
+	By Password= By.name("passwd");
+	By signin= By.name("proceed");
+	
+
+	public WebElement EmailID()
+	{
+		return driver.findElement(username);
+	}
+}

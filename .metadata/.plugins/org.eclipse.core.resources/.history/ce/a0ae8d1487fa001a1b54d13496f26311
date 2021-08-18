@@ -1,0 +1,22 @@
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Axiz {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+		WebDriver driverAx = new ChromeDriver ();
+		driverAx.get("https://www.axisbank.com/");
+		//Thread.sleep(4000);
+		driverAx.findElement(By.className("close_button")).click();
+		driverAx.findElement(By.xpath("div[id='nvpush_cross']/svg/g")).click();
+		driverAx.switchTo().alert().accept();;
+		
+		
+	}
+
+}

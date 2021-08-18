@@ -1,0 +1,65 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+
+
+public class AmazonCart {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/seleniumPractise/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+		
+		String[] itemsNeeded = {"Cucumber","Brocolli","Beetroot"};
+		Thread.sleep(3000);
+		
+		additems(driver,itemsNeeded);
+		
+		//Click on the cart bag
+		driver.findElement(By.cssSelector("img[alt='Cart']")).click();
+		driver.findElement(By.xpath("//button[text()='PROCEED TO CHECKOUT']")).click();
+		
+		driver.findElement(By.cssSelector("input[placeholder='Enter promo code']")).sendKeys("rahulshettyacademy");
+		
+		driver.findElement(By.cssSelector("button.promoBtn")).click();
+	}
+
+	public static void additems(WebDriver driver, String[] itemsNeeded)	
+	{
+		int j=0;
+		List<WebElement> products= driver.findElements(By.cssSelector("h4.product-name"));
+		//it will retrieve the list of all the items present on the screen with the name = product-name
+		
+		for (int i=0;i<products.size();i++)//run the loop till the product list ends
+		{
+		String[] name= products.get(i).getText().split("-");// created an array for splitting the product name by "-"
+		String formattedName = name[0].trim(); //save the first sub string by removing the spaces
+		List itemsNeededList = Arrays.asList(itemsNeeded);//create as it is same new list  and feed the users array list in the new list
+		
+		//below loop will check and match the names
+		if (itemsNeededList.contains(formattedName))
+		{
+			j++;
+			driver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();
+			if (j==itemsNeeded.length)
+			{
+				break;
+			}
+			
+		}
+		}
+	}
+
+}

@@ -1,0 +1,27 @@
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class Axiz {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("disable-notifications");
+		WebDriver driverAx = new ChromeDriver (options);
+		driverAx.get("https://www.axisbank.com/");
+		Thread.sleep(4000);
+		
+		
+		//driverAx.findElement(By.className("close_button")).click();
+		driverAx.findElement(By.xpath("div[id='nvpush_cross']/svg/g")).click();
+	
+		
+		
+	}
+
+}

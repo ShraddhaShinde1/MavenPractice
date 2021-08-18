@@ -1,0 +1,12 @@
+package ObjectRepo;
+
+import org.openqa.selenium;
+
+public class RediffLoginPage {
+
+	WebDriver driver;
+	
+
+	
+
+}

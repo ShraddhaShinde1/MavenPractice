@@ -1,0 +1,16 @@
+package TestCase;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class RediffHomeLoginPage {
+
+	@Test
+	public void login()
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\YUVARAJ\\Documents\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://mail.rediff.com/");
+	}
+}

@@ -1,0 +1,33 @@
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AmazonLive {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:\\\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get("https://www.amazon.in");
+		driver.findElement(By.id("nav-hamburger-menu")).click();
+	
+		driver.findElement(By.xpath("//div[@id='hmenu-content']/ul/li[11]/a/div")).click();
+		
+		driver.findElement(By.xpath("//div[@id='hmenu-content']/ul[10]/li[3]/a")).click();
+		
+		
+		driver.findElement(By.id("sobe_d_b_7_1")).click();
+		
+		int s = driver.findElements(By.xpath("//span[text()='FREE Delivery by Amazon']")).size();
+		System.out.print(s);
+		
+			
+	}
+
+}

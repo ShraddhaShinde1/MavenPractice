@@ -1,0 +1,10 @@
+package TestCase;
+
+public class RediffHomeLoginPage {
+
+	@Test
+	public void login()
+	{
+		
+	}
+}

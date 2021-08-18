@@ -1,0 +1,2 @@
+module TestNg_Project {
+}
